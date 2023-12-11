@@ -1,0 +1,1136 @@
+/* GLOBAL RULES */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:#343434;
+    --secondary-color:#748182;
+    --background-color:#f7f7f7;
+    --padding-top:100px;
+    --padding-bottom:70px;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , a .logo{
+    font-family: 'Montserrat', sans-serif;
+}
+p  , .sub-title , a{
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+:focus{
+    outline: none;
+}
+/* COMPONENT */
+.main-title{
+    margin-bottom: 80px;
+}
+.main-title h3{
+    color: var(--main-color);
+    font-size: 40px;
+    z-index: 4;
+}
+.main-title h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -10px;
+    left: 0;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+/*  Start Animation */
+.layertop{
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 555555555;
+  animation: 1s top;
+  animation-fill-mode: forwards;
+}
+.layerbtm{
+    position: fixed;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 555555555;
+    animation: 1s bottom;
+    animation-fill-mode: forwards;
+  }
+@keyframes top {
+    from{
+        top: 50%;
+    }
+    to{
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes bottom {
+    from{
+        bottom: 50%;
+    }
+    to{
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+.loading{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    border: 8px solid;
+    border-color: #eee #000 #eee #eee ;
+    border-radius: 50%;
+    z-index: 55555555555555555;
+    animation: 1.5s load infinite , 1.5s load2;
+    animation-fill-mode: forwards;
+}
+@keyframes load {
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform:translate(-50%,-50%) rotate(360deg);
+        opacity: 0;
+    }
+}
+@keyframes load2 {
+    from{
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+/* Heading Animation */
+.landing .hero-content {
+    z-index: 5;
+    width: 650px !important;
+    height: 60px;
+}
+.landing h2{
+    font-size: 50px;
+}
+.landing h1 {
+    width: 610px;
+    height: 70px;
+    font-size: 60px;
+    line-height: 72px;
+    animation: 6s changeWidth linear infinite;
+}
+.landing h1::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    bottom: -15px;
+    width: 4px;
+    background-color: #ffffff;
+    z-index: 500;
+}
+.landing h1 div{
+    animation: 6s header linear infinite;
+    width: auto;
+    z-index: 5000;
+}
+.landing h1 div span:first-child {
+    width: 610px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 65px;
+}
+.landing .endpercent {
+    width: 610px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 5px !important;
+  }
+  @keyframes header {
+    11% {
+      transform: translateX(0);
+    }
+    22% {
+      transform: translateX(200px);
+    }
+    33% {
+      transform: translateX(0);
+    }
+    44% {
+      transform: translateX(0);
+    }
+    55% {
+      transform: translateX(200px);
+    }
+    66% {
+      transform: translateX(0);
+    }
+    77% {
+      transform: translateX(0);
+    }
+    88% {
+      transform: translateX(200px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes changeWidth {
+    11% {
+      width: 610px;
+    }
+    22% {
+      width: 410px;
+    }
+    33% {
+      width: 520px;
+    }
+    44% {
+      width: 520px;
+    }
+    55% {
+      width: 410px;
+    }
+    66% {
+      width: 500px;
+    }
+    77% {
+      width: 500px;
+    }
+    88% {
+      width: 410px;
+    }
+    100% {
+      width: 610px;
+    }
+  }
+.Larry-Daniels{
+    visibility: visible;
+    animation: 6s Larry-Daniels linear infinite;
+}
+@keyframes Larry-Daniels {
+    11% {
+      visibility: visible;
+    }
+    22% {
+      visibility: hidden;
+    }
+    33% {
+      visibility: hidden;
+    }
+    44% {
+      visibility: hidden;
+    }
+    55% {
+      visibility: hidden;
+    }
+    66% {
+      visibility: hidden;
+    }
+    77% {
+      visibility: hidden;
+    }
+    88% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+.Developer{
+    visibility: hidden;
+    animation: 6s Developer linear infinite;
+}
+@keyframes Developer {
+    11% {
+      visibility: hidden;
+    }
+    22% {
+      visibility: hidden;
+    }
+    33% {
+      visibility: visible;
+    }
+    44% {
+      visibility: visible;
+    }
+    55% {
+      visibility: hidden;
+    }
+    66% {
+      visibility: hidden;
+    }
+    77% {
+      visibility: hidden;
+    }
+    88% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+.Designer{
+    visibility: hidden;
+    animation: 6s Designer linear infinite;
+}  
+@keyframes Designer {
+    11% {
+      visibility: hidden;
+    }
+    22% {
+      visibility: hidden;
+    }
+    33% {
+      visibility: hidden;
+    }
+    44% {
+      visibility: hidden;
+    }
+    55% {
+      visibility: hidden;
+    }
+    66% {
+      visibility: visible;
+    }
+    77% {
+      visibility: visible;
+    }
+    88% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @media screen and (min-width: 311px) and (max-width: 767px){
+.landing .hero-content {
+max-width:fit-content;
+display: none;
+}
+.hero-content.two {
+display: block !important;
+max-width: auto;
+position: absolute;
+}
+.hero-content h5{
+    font-size: 35px;
+}
+.animationTwo::after {
+max-width: fit-content;
+}
+}
+.animationTwo::before {
+    content: "";
+    width: 2px;
+    height: 40px;
+    right: -5px;
+    bottom: 0;
+    background-color: #aebcb9;
+    position: absolute;
+  }
+.animationTwo::after {
+content: " Larry Daniels ";
+font-size: 35px;
+color: white;
+font-weight: 400;
+animation-name:animationTwo ;
+animation-duration: 7s;
+animation-iteration-count: infinite;
+}
+@keyframes animationTwo {
+
+    0.571428571428571%{content:"Larry Daniels ";}
+    1.14285714285714%{content:"Larry Daniels ";}
+    1.71428571428571%{content:"Larry Daniels ";}
+    2.28571428571429%{content:"Larry Daniels ";}
+    2.85714285714286%{content:"Larry Daniels ";}
+    3.42857142857143%{content:"Larry Daniels ";}
+    4%{content:"Larry Daniels ";}
+    4.57142857142857%{content:"Larry Daniels ";}
+    5.14285714285714%{content:"Larry Daniels ";}
+    5.71428571428571%{content:"Larry Daniels ";}
+    6.28571428571428%{content:"Larry Daniels ";}
+    6.85714285714285%{content:"Larry Daniels ";}
+    7.42857142857143%{content:"Larry Daniels ";}
+    8%{content:"Larry Daniels ";}
+    8.57142857142857%{content:"Larry Daniels ";}
+    9.14285714285714%{content:"Larry Daniels ";}
+    9.71428571428571%{content:"Larry Daniel";}
+    10.2857142857143%{content:"Larry Danie";}
+    10.8571428571429%{content:"Larry Dani";}
+    11.4285714285714%{content:"Larry Dan";}
+    12%{content:"Larry Da";}
+    12.5714285714286%{content:"Larry D";}
+    13.1428571428571%{content:"Larry ";}
+    13.7142857142857%{content:"Larry";}
+    14.2857142857143%{content:"Larr";}
+    14.8571428571429%{content:"Lar";}
+    15.4285714285714%{content:"La";}
+    16%{content:"L";}
+    16.5714285714286%{content:"";}
+    17.1428571428571%{content:"D";}
+    17.7142857142857%{content:" De";}
+    18.2857142857143%{content:" Dev";}
+    18.8571428571429%{content:" Deve";}
+    19.4285714285714%{content:" Devel";}
+    20%{content:" Develo";}
+    20.5714285714286%{content:"Develop";}
+    21.1428571428571%{content:" Develope";}
+    21.7142857142857%{content:" Developer ";}
+    22.2857142857143%{content:" Developer ";}
+    22.8571428571429%{content:" Developer ";}
+    23.4285714285714%{content:" Developer ";}
+    24%{content:" Developer ";}
+    24.5714285714286%{content:" Developer ";}
+    25.1428571428572%{content:" Developer ";}
+    25.7142857142857%{content:" Developer ";}
+    26.2857142857143%{content:" Developer ";}
+    26.8571428571429%{content:" Developer ";}
+    27.4285714285715%{content:" Developer ";}
+    28%{content:" Developer ";}
+    28.5714285714286%{content:" Developer ";}
+    29.1428571428572%{content:" Developer ";}
+    29.7142857142857%{content:" Developer ";}
+    30.2857142857143%{content:" Developer ";}
+    30.8571428571429%{content:" Developer ";}
+    31.4285714285715%{content:" Developer ";}
+    32%{content:" Developer ";}
+    32.5714285714286%{content:" Developer ";}
+    33.1428571428572%{content:" Developer ";}
+    33.7142857142857%{content:" Developer ";}
+    34.2857142857143%{content:" Developer ";}
+    34.8571428571429%{content:" Developer ";}
+    35.4285714285715%{content:" Developer ";}
+    36%{content:" Developer ";}
+    36.5714285714286%{content:" Developer ";}
+    37.1428571428572%{content:" Developer ";}
+    37.7142857142857%{content:" Developer ";}
+    38.2857142857143%{content:" Developer ";}
+    38.8571428571429%{content:" Developer ";}
+    39.4285714285714%{content:" Developer ";}
+    40%{content:" Developer ";}
+    40.5714285714286%{content:" Developer ";}
+    41.1428571428571%{content:" Developer ";}
+    41.7142857142857%{content:" Developer ";}
+    42.2857142857143%{content:" Developer ";}
+    42.8571428571429%{content:" Developer ";}
+    43.4285714285714%{content:" Developer ";}
+    44%{content:" Developer ";}
+    44.5714285714286%{content:" Develope";}
+    45.1428571428571%{content:" Develop";}
+    45.7142857142857%{content:" Develo";}
+    46.2857142857143%{content:" Devel";}
+    46.8571428571428%{content:" Deve";}
+    47.4285714285714%{content:" Dev";}
+    48%{content:" De";}
+    48.5714285714285%{content:" D";}
+    49.1428571428571%{content:"D";}
+    49.7142857142857%{content:"De";}
+    50.2857142857143%{content:"Des";}
+    50.8571428571428%{content:"Desi";}
+    51.4285714285714%{content:"Desig";}
+    52%{content:"Design";}
+    52.5714285714285%{content:"Designe";}
+    53.1428571428571%{content:"Designer  ";}
+    53.7142857142857%{content:"Designer  ";}
+    54.2857142857142%{content:"Designer  ";}
+    54.8571428571428%{content:"Designer  ";}
+    55.4285714285714%{content:"Designer  ";}
+    56%{content:"Designer  ";}
+    56.5714285714285%{content:"Designer  ";}
+    57.1428571428571%{content:"Designer  ";}
+    57.7142857142857%{content:"Designer  ";}
+    58.2857142857142%{content:"Designer  ";}
+    58.8571428571428%{content:"Designer  ";}
+    59.4285714285714%{content:"Designer  ";}
+    59.9999999999999%{content:"Designer  ";}
+    60.5714285714285%{content:"Designer  ";}
+    61.1428571428571%{content:"Designer  ";}
+    61.7142857142856%{content:"Designer  ";}
+    62.2857142857142%{content:"Designer  ";}
+    62.8571428571428%{content:"Designer  ";}
+    63.4285714285714%{content:"Designer  ";}
+    63.9999999999999%{content:"Designer  ";}
+    64.5714285714285%{content:"Designer  ";}
+    65.1428571428571%{content:"Designer  ";}
+    65.7142857142856%{content:"Designer  ";}
+    66.2857142857142%{content:"Designer  ";}
+    66.8571428571428%{content:"Designer  ";}
+    67.4285714285713%{content:"Designer  ";}
+    67.9999999999999%{content:"Designer  ";}
+    68.5714285714285%{content:"Designer  ";}
+    69.1428571428571%{content:"Designer  ";}
+    69.7142857142856%{content:"Designer  ";}
+    70.2857142857142%{content:"Designer  ";}
+    70.8571428571428%{content:"Designer  ";}
+    71.4285714285713%{content:"Designer  ";}
+    71.9999999999999%{content:"Designer  ";}
+    72.5714285714285%{content:"Designer  ";}
+    73.142857142857%{content:"Designer  ";}
+    73.7142857142856%{content:"Designer  ";}
+    74.2857142857142%{content:"Designer  ";}
+    74.8571428571427%{content:"Designer  ";}
+    75.4285714285713%{content:"Designer  ";}
+    75.9999999999999%{content:"Designe";}
+    76.5714285714285%{content:"Design";}
+    77.142857142857%{content:"Desig";}
+    77.7142857142856%{content:"Desi";}
+    78.2857142857142%{content:"Des";}
+    78.8571428571427%{content:"De";}
+    79.4285714285713%{content:"D";}
+    79.9999999999999%{content:"L";}
+    80.5714285714284%{content:"La";}
+    81.142857142857%{content:"Lar";}
+    81.7142857142856%{content:"Larr";}
+    82.2857142857141%{content:"Larry";}
+    82.8571428571427%{content:"Larry ";}
+    83.4285714285713%{content:"Larry D";}
+    83.9999999999999%{content:"Larry Da";}
+    84.5714285714284%{content:"Larry Dan";}
+    85.142857142857%{content:"Larry Dani";}
+    85.7142857142856%{content:"Larry Danie";}
+    86.2857142857141%{content:"Larry Daniel";}
+    86.8571428571427%{content:"Larry Daniels ";}
+    87.4285714285713%{content:"Larry Daniels ";}
+    87.9999999999998%{content:"Larry Daniels ";}
+    88.5714285714284%{content:"Larry Daniels ";}
+    89.142857142857%{content:"Larry Daniels ";}
+    89.7142857142856%{content:"Larry Daniels ";}
+    90.2857142857141%{content:"Larry Daniels ";}
+    90.8571428571427%{content:"Larry Daniels ";}
+    91.4285714285713%{content:"Larry Daniels ";}
+    91.9999999999998%{content:"Larry Daniels ";}
+    92.5714285714284%{content:"Larry Daniels ";}
+    93.142857142857%{content:"Larry Daniels ";}
+    93.7142857142855%{content:"Larry Daniels ";}
+    94.2857142857141%{content:"Larry Daniels ";}
+    94.8571428571427%{content:"Larry Daniels ";}
+    95.4285714285712%{content:"Larry Daniels ";}
+    95.9999999999998%{content:"Larry Daniels ";}
+    96.5714285714284%{content:"Larry Daniels ";}
+    97.142857142857%{content:"Larry Daniels ";}
+    97.7142857142855%{content:"Larry Daniels ";}
+    98.2857142857141%{content:"Larry Daniels ";}
+    98.8571428571427%{content:"Larry Daniels ";}
+    99.4285714285712%{content:"Larry Daniels ";}
+    99.9999999999998%{content:"Larry Daniels ";}
+  }
+  
+/* ========================================= NAVBAR ========================================= */
+body:has(.home.active) nav{
+    background-color: transparent !important;
+}
+body:has(.home.active)   .navbar-toggler{
+  color: #fff !important;
+} 
+body:has(.home.active) nav .logo{
+    color: #fff;
+}
+body:has(.home.active) .navbar-nav a {
+    color: #fff !important;
+}
+body:has(.home.active) .navbar-nav a::before ,
+.navbar-nav a.active::before {
+    background-color: #fff;
+}
+
+nav .logo{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #1c1c1c;
+}
+nav .navbar-collapse{
+flex-grow: 0;
+}
+.navbar-nav{
+    margin-right: -15px;
+   width: 500px;
+}
+.navbar-nav a ,
+.navbar-nav a.active{
+    width: fit-content;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    color: #111111;
+}
+.navbar-nav a::before ,
+.navbar-nav a.active::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #111111;
+    transition: all 0.5s;
+}
+.navbar-nav a::before{
+    width: 0;
+}
+.navbar-nav a:hover::before,
+.navbar-nav a.active::before{
+    width: 100%;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+@media (max-width:991px){
+.navbar-nav li a{
+    font-size: 13px;
+}  
+}
+@media (max-width:767px) {
+.container-md{
+    padding-right: 0;
+    padding-left: 0;  
+} 
+.navbar-nav{
+   width: 100%;
+   margin: 10px 0;
+   padding-bottom: 20px;
+   background-color: #FFF;
+}
+.navbar-nav li{
+    margin: 25px 15px 0;
+}
+/* .navbar-nav li a{
+    color: #111111 !important;
+} */
+.navbar-nav a::before ,
+.navbar-nav a.active::before{
+    background-color: #222222 !important;
+}
+nav .logo{
+    margin-left: 20px;
+}
+}
+
+/* ========================================= LANDING ======================================== */
+.landing{
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+}
+.landing .overlay{
+background-color: rgba(0,0,0,0.65);
+}
+.social-icon{
+    top: 70%;
+    z-index: 500;
+}
+.landing  a i{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 35px;
+    background-color: rgba(0,0,0,0.3);
+}
+@media (max-width:767px) {
+.landing .container{
+    width: 100%;
+}
+.social-icon{
+    top: 67.6%;
+}
+}
+/* ============================================= ABOUT ============================================== */
+.about{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.about .about-image{
+    padding: 0 0 0 30px;
+    margin-bottom: 30px;
+}
+.about .about-image::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+.about .about-content{
+    margin-bottom: 30px;
+}
+.about .about-content .sub-title{
+    color: #999;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.about .about-content p{
+    color: #748182;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.about .skills{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.about .skills .progress{
+    margin-bottom: 30px;
+    height: 24px;
+}
+.about .skills .skill-progress{
+    padding: 5px 10px ;
+    border-radius: 2px ;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    position: relative;
+}
+.about .skills h6 {
+    font-size: 13px;
+    padding-top: 8px ;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.about .skills .skill-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    padding: 2px 8px 0px;
+    font-size: 13px;
+}
+.about .skills .skill-progress span.first{
+    width: 50%;
+    animation: 1s changeOne 0.5s forwards;
+}
+.about .skills .skill-progress span.second{
+    width: 25%;
+    animation: changeTwo 1s 0.5s forwards;
+}
+.about .skills .skill-progress span.third{
+    width: 30%;
+    animation: changeThird 1s 0.5s forwards;
+}
+@keyframes changeOne {
+    from {
+      width: 50%;
+    }
+    to {
+      width: 95%;
+    }
+  }
+  @keyframes changeTwo {
+    from {
+      width: 25%;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  @keyframes changeThird {
+    from {
+      width: 30%;
+    }
+    to {
+      width: 90%;
+    }
+  } 
+.about .buton{
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all 0.5s;
+}
+.about .btn-download ,
+.about .btn-contact:hover{
+    background: #1c1c1c;
+    color: #eee;
+}
+.about .btn-contact ,
+.about .btn-download:hover{
+    background: transparent;
+    color: var(--main-color);
+}
+@media (max-width:991px) {
+.about .about-content{
+    margin-top: 30px;
+} 
+}
+@media (max-width:767px) {
+.about .container-md{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+}
+/* ======================================= SERVICES ======================================== */
+.services{
+    background-color: var(--background-color);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.services .item{
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+.services .item i{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 70px;
+    background-color:var(--background-color) ;
+    transition: all 0.5s;
+}
+.services .item:hover i{
+    background-color: #1c1c1c;
+    color: #eee;
+}
+.services .item h6{
+    margin: 20px 0 15px;
+    font-size: 18px;
+}
+.services .item p{
+    font-size: 14px;
+    word-spacing: 2px;
+    line-height: 1.8;
+    color: #748182;
+}
+@media (max-width:767px) {
+.services .container-md{
+        padding-right: 15px ;
+        padding-left: 15px;    
+}    
+}
+/* ======================================= PORTOFOLIO ======================================= */
+.portofolio{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.portofolio .portofolio-links{
+    margin-bottom: 50px;
+}
+.portofolio .portofolio-links span{
+    margin: 0 4px;
+    color: #222;
+    cursor: pointer;
+    z-index: 2;
+}
+.nav-pills .nav-link.active{
+    background-color: transparent !important;
+    color: #222 !important;
+}
+.portofolio .portofolio-links span::before ,
+.portofolio .portofolio-links span.active::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #111;
+    z-index: -1;
+    transition: all 0.4s;
+    width: 100%;
+}
+.portofolio .portofolio-links span::before {
+    width: 0;
+}
+.portofolio .portofolio-links span:hover::before ,
+.portofolio .portofolio-links span.active::before{
+ width: 55%;
+}
+.portofolio .portofolio-image{
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.portofolio .portofolio-image img{
+    display: block;
+}
+.portofolio .overlay{
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.portofolio .portofolio-image:hover .overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+.portofolio .portofolio-image h6{
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.portofolio .icons i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: #111;
+    color: #eee;
+    transition: all 0.5s;
+}
+.portofolio a:hover i{
+    background-color: transparent;
+    color: #111;
+}
+@media (max-width:767px) {
+.portofolio .container-md{
+        padding-right: 15px ;
+        padding-left: 15px;    
+}    
+}
+/* ======================================= TESTIMONIALS ====================================== */
+.testimonials{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--background-color);
+}
+.testimonials img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+}
+.testimonials p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15.8px;
+    word-spacing: 2px;
+    color: #748182;
+}
+.testimonials h6{
+    margin: 30px 0 5px;
+}
+.testimonials span{
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.testimonials .slider-icons{
+    position: absolute;
+    bottom:-100px;
+}
+.testimonials .slider-icons button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 15px 7px;
+    background-color: #869791;
+    transition: opacity 0.2s ease;
+}
+.testimonials .slider-icons button:hover{
+ opacity: 1;
+}
+@media (max-width:767px) {
+    .testimonials .container-md{
+            padding-right: 15px ;
+            padding-left: 15px;    
+    }    
+    }
+/* ======================================= COUNTERS ===================================== */
+.counters{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.counters .counter-icon{
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.counters h3{
+    color: #343434;
+    font-size: 30px; 
+}
+.counters p{
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #748182;
+}
+@media (max-width:767px) {
+.counters .container-md{
+        padding-right: 15px ;
+        padding-left: 15px;    
+}    
+}
+/* ============================================ TEAMS ============================================ */
+.teams{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--background-color);
+}
+.teams .team{
+    background-color: rgba(52, 52, 52,.8);
+    margin-bottom: 10px;
+}
+.teams img{
+    transition: all 0.4s ease 0s;
+}
+.teams .team-image:hover img{
+    transform: scale(1.2);
+}
+.teams .team-social{
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    inset: 5px;
+    text-align: center;
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5,0.5);
+    transition: 0.5s;
+}
+.teams .team:hover .team-social{
+    cursor: pointer;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1,1);
+}
+.teams .team-social .team-icons{
+    position: relative;
+    top: 200px;   
+}
+.teams .team a{
+    padding: 0 5px;
+}
+.teams .team a i{
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.teams .team a i:hover{
+    background-color: #fff;
+    color: #000;
+}
+.teams .team .team-info{
+    padding: 25px;
+}
+@media (max-width:767px) {
+.teams .container-md{
+        padding-right: 15px ;
+        padding-left: 15px;    
+}    
+}
+/* ========================================= CONTACT ===================================== */
+.contacts{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.contacts .contact-info{
+    margin-bottom: 100px;
+}
+.contacts .contact-icon{
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.contacts .contact-info:hover .contact-icon{
+    background-color: #000;
+    color: #fff;
+}
+.contacts p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+.contacts input ,
+.contacts textarea{
+    border-radius: 5px;
+    padding: 10px;
+    background: #f4f4f4;
+}
+.contacts input:focus , 
+.contacts textarea:focus{
+   box-shadow: none;
+   background-color:#f4f4f4 ;
+   color: #212529;
+   outline: 0;
+}
+.contacts textarea{
+    height: 160px;
+    max-height: 160px;
+    margin-top: 15px;
+    resize: none;
+}
+.contacts button{
+    padding: 10px 40px;
+    background: #1c1c1c;
+    color: #eee;
+    width: fit-content;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-left: 15px;
+    transition: all 0.5s;
+}
+.contacts button:hover{
+    background-color: #fff;
+    color: #343434;
+}
+@media (max-width:991px) {
+.contacts .contact .iName{
+    margin-bottom: 15px;
+}
+.contacts .contact{
+    padding: 0 10px !important;
+}
+}
+@media (max-width:767px) {
+.contacts .container-md{
+        padding-right: 15px ;
+        padding-left: 15px;    
+}    
+}
+/* ====================================== FOOTER =================================== */
+footer{
+    background: #1c1c1c;
+    padding: 30px;
+}
+footer p{
+    line-height: 1.6;
+    margin: 0;
+    color: #748182;
+    font-size: 13px;
+}
