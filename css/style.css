@@ -103,7 +103,7 @@ a{
     border-color: #eee #000 #eee #eee ;
     border-radius: 50%;
     z-index: 55555555555555555;
-    animation: 1.5s load infinite , 1.5s load2;
+    animation: 2s load infinite , 0.5s load2;
     animation-fill-mode: forwards;
 }
 @keyframes load {
@@ -545,16 +545,16 @@ body:has(.home.active)   .navbar-toggler{
   color: #fff !important;
 } 
 body:has(.home.active) nav .logo{
-    color: #fff;
+    color: #fff ;
 }
-body:has(.home.active) .navbar-nav a {
+body:has(.home.active) .navbar-nav a ,
+.navbar-nav a.active {
     color: #fff !important;
 }
 body:has(.home.active) .navbar-nav a::before ,
 .navbar-nav a.active::before {
     background-color: #fff;
 }
-
 nav .logo{
     font-size: 18px;
     letter-spacing: 1px;
@@ -614,9 +614,10 @@ flex-grow: 0;
 .navbar-nav li{
     margin: 25px 15px 0;
 }
-/* .navbar-nav li a{
-    color: #111111 !important;
-} */
+body:has(.home.active) .navbar-nav a ,
+.navbar-nav a.active {
+    color: #111 !important;
+}
 .navbar-nav a::before ,
 .navbar-nav a.active::before{
     background-color: #222222 !important;
