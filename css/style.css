@@ -103,7 +103,7 @@ a{
     border-color: #eee #000 #eee #eee ;
     border-radius: 50%;
     z-index: 55555555555555555;
-    animation: 2s load infinite , 0.5s load2;
+    animation: 3s load  , 1.5s load2;
     animation-fill-mode: forwards;
 }
 @keyframes load {
